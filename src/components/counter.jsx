@@ -12,34 +12,25 @@ class Counter extends Component {
 		tags: ["tag1", "tag2", "tag3"],
 	};
 
-	handleIncrement = () => {
+	handleIncrement = (product) => {
+		console.log(product);
 		this.setState({ count: this.state.count + 1 });
 	};
 
 	render() {
 		return (
 			<div>
-				<img src={this.state.imageUrl} alt="" className="img-fluid" />
-
-				<div className="py-5 container">
-					<div className={this.getClasses()}>
-						<span>{this.formatCount()}</span>
-					</div>
+				<div className="py-1 container">
+					<span className={this.getClasses()}>
+						{this.formatCount()}
+					</span>
 
 					<button
-						onClick={this.handleIncrement}
-						className="btn btn-sm mt-3 px-4 btn-secondary"
+						onClick={() => this.handleIncrement(1)}
+						className="btn btn-sm ms-2 px-4 btn-secondary"
 					>
 						Increment
 					</button>
-
-					<hr />
-
-					<ul>
-						{this.state.tags.map((tag) => (
-							<li>{tag}</li>
-						))}
-					</ul>
 				</div>
 			</div>
 		);
