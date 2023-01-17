@@ -4,10 +4,10 @@ const NavBar = ({ totalCounters }) => {
 	return (
 		<nav className="navbar fixed-top bg-dark" data-bs-theme="dark">
 			<div className="container-fluid">
-				<a className="navbar-brand text-light" href="#">
+				<p className="navbar-brand text-light">
 					NavBar -{" "}
 					<span className="badge bg-secondary">{totalCounters}</span>
-				</a>
+				</p>
 			</div>
 		</nav>
 	);
