@@ -7,14 +7,18 @@ class Counter extends Component {
 	};
 
 	render() {
+		let classes = "mt-5 text-center p-2 alert ";
+		classes += this.state.count === 0 ? "alert-danger" : "alert-info";
+
 		return (
 			<div>
 				<img src={this.state.imageUrl} alt="" className="img-fluid" />
 
 				<div className="py-5 container">
-					<div className="mt-5 text-center bg-info p-2 ">
+					<div className={classes}>
 						<span>{this.formatCount()}</span>
 					</div>
+
 					<button className="btn btn-sm mt-3 px-4 btn-secondary">
 						Increment
 					</button>
@@ -25,7 +29,7 @@ class Counter extends Component {
 
 	formatCount() {
 		const { count } = this.state;
-		return count === 0 ? <h1>Zero</h1> : count;
+		return count === 0 ? "Zero" : count;
 	}
 }
 
