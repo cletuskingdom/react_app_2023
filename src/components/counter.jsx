@@ -9,9 +9,11 @@ class Counter extends Component {
 	};
 
 	render() {
-		console.log("props", this.props);
+		console.log(this.props);
+
 		return (
 			<div>
+				{this.props.children}
 				<div className="py-1 container">
 					<span className={this.getClasses()}>
 						{this.formatCount()}
@@ -22,6 +24,13 @@ class Counter extends Component {
 						className="btn btn-sm ms-2 px-4 btn-secondary"
 					>
 						Increment
+					</button>
+
+					<button
+						onClick={() => this.props.onDelete(this.props.id)}
+						className="ms-2 btn btn-sm px-4 btn-danger"
+					>
+						Delete
 					</button>
 				</div>
 			</div>
