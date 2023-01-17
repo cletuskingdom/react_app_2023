@@ -13,6 +13,16 @@ class App extends Component {
 		],
 	};
 
+	constructor() {
+		super();
+		console.log("App - Constructor");
+	}
+
+	componentDidMount() {
+		// this is the right place to make Ajax call
+		console.log("App - Mouted");
+	}
+
 	handleIncrement = (counter) => {
 		const counters = [...this.state.counters];
 		const index = counters.indexOf(counter);
@@ -35,6 +45,8 @@ class App extends Component {
 	};
 
 	render() {
+		console.log("App - Render");
+
 		return (
 			<React.Fragment>
 				<NavBar

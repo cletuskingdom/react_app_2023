@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
 const NavBar = ({ totalCounters }) => {
 	return (
-		<nav class="navbar fixed-top bg-dark" data-bs-theme="dark">
+		<nav className="navbar fixed-top bg-dark" data-bs-theme="dark">
 			<div className="container-fluid">
 				<a className="navbar-brand text-light" href="#">
 					NavBar -{" "}
