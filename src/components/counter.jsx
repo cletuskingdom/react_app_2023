@@ -1,5 +1,10 @@
 import React, { Component } from "react";
 class Counter extends Component {
+	constructor() {
+		super();
+		this.handleIncrement = this.handleIncrement.bind(this);
+	}
+
 	state = {
 		count: 0,
 		imageUrl:
@@ -8,7 +13,7 @@ class Counter extends Component {
 	};
 
 	handleIncrement() {
-		console.log("increment Clicked");
+		console.log("increment Clicked", this);
 	}
 
 	render() {
