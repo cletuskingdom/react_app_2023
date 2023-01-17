@@ -7,8 +7,7 @@ class Counter extends Component {
 	};
 
 	render() {
-		let classes = "mt-5 text-center p-2 alert ";
-		classes += this.state.count === 0 ? "alert-danger" : "alert-info";
+		let classes = this.getClasses();
 
 		return (
 			<div>
@@ -25,6 +24,12 @@ class Counter extends Component {
 				</div>
 			</div>
 		);
+	}
+
+	getClasses() {
+		let classes = "mt-5 text-center p-2 alert ";
+		classes += this.state.count === 0 ? "alert-danger" : "alert-info";
+		return classes;
 	}
 
 	formatCount() {
